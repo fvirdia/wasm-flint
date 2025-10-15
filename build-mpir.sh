@@ -4,7 +4,7 @@ set -ev
 cd $BUILD
 
 ### Download and build MPIR
-git clone git://github.com/wbhart/mpir.git mpir
+git clone https://github.com/wbhart/mpir.git mpir
 cd mpir
 
 git checkout $MPIR_VERSION
@@ -13,7 +13,7 @@ git checkout $MPIR_VERSION
 ./autogen.sh
 
 time CC_FOR_BUILD=gcc ABI=long emconfigure ./configure --build i686-pc-linux-gnu --host=none --disable-assembly --prefix=$PREFIX CFLAGS="-O3 -Wall"
-time emmake make -j 4
+time emmake make -j8
 
 emmake make install
 
