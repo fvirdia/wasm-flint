@@ -14,5 +14,7 @@ export GMP_VERSION=6.3.0
 # See https://www.mpfr.org/mpfr-current/#download
 export MPFR_VERSION=4.2.2
 
+export FFTW_VERSION=3.3.10
+
 export BUILD=`pwd`/build
 export PREFIX=$BUILD/local

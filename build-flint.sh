@@ -30,6 +30,3 @@ time emmake make install || true # on macos install fails even if things are fin
 # fails using gmp
 # em++ partitions.cpp -o partitions.js -L$PREFIX/lib -I$PREFIX/include/flint -I$PREFIX/include -lflint -lmpir -lmpfr
 # time node partitions.js 100093982083408923
-
-cp -r $PREFIX/include  $BUILD/../dist/include
-cp -r $PREFIX/lib  $BUILD/../dist/lib
